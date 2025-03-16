@@ -2,10 +2,12 @@
 CXX = g++
 
 # Define the compiler flags (ChatGPT).
-CXXFLAGS = -Wall -std=c++17 -I/home/turauth/repos/HW03/vcpkg/installed/x64-linux/include
+CXXFLAGS = -Wall -std=c++17 -fPIC -I/home/turauth/repos/HW03/vcpkg/installed/x64-linux/include \
+	$(shell pkg-config --cflags Qt5Widgets Qt5Gui Qt5Core)
 
 # Define the linker flags (ChatGPT).
-LDFLAGS = -L/home/turauth/repos/HW03/vcpkg/installed/x64-linux/lib -lcurl -ljsoncpp -lz -lssl -lcrypto
+LDFLAGS = -L/home/turauth/repos/HW03/vcpkg/installed/x64-linux/lib -lcurl -ljsoncpp -lz -lssl -lcrypto \
+	$(shell pkg-config --libs Qt5Widgets Qt5Gui Qt5Core)
 
 # Define the target executable.
 TARGET = hw3
