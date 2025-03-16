@@ -1,1 +1,1 @@
-This program outputs current weather data for Dayton, TN.
+This program outputs current weather data for Dayton, TN. The following ChatGPT conversation was used to help develop this program: https://chatgpt.com/share/67d6218d-ebf0-8009-b5d7-b280900a9bc0.
